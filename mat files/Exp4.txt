@@ -1,0 +1,47 @@
+Load flow converged in 11 iterations using GAUSS-SEIDEL method.
+BUSNO  BUSMAG    BUSANGLE (degrees)
+   1   1.0600       0.0000
+   2   1.0475      -2.8060
+   3   1.0243      -4.9946
+   4   1.0236      -5.3274
+   5   1.0180      -6.1491
+
+LOAD_FLOW SOLUTION (All quantities except angles in P.U.)
+ BUS  PG       QG       PL       QL       VOLT     ANG(deg)
+   1    1.295   -0.076    0.000    0.000   1.0600     0.0000
+   2    0.400    0.301    0.200    0.100   1.0475    -2.8060
+   3    0.001    0.001    0.450    0.150   1.0243    -4.9946
+   4   -0.000   -0.000    0.400    0.050   1.0236    -5.3274
+   5   -0.000   -0.000    0.600    0.100   1.0180    -6.1491
+
+Total Real Power Generation =   1.6958 P.U.
+Total Reactive Power Generation =   0.2256 P.U.
+Total Real Power Load =   1.6500 P.U.
+Total Reactive Power Load =   0.4000 P.U.
+
+LINE FLOWS IN THE SYSTEM (P.U.)
+ From To   Real Power   Reactive Power
+   1    2        0.888       -0.087
+   2    1       -0.874        0.063
+
+   1    3        0.407        0.011
+   3    1       -0.395       -0.030
+
+   2    3        0.247        0.035
+   3    2       -0.243       -0.068
+
+   2    4        0.279        0.030
+   4    2       -0.275       -0.059
+
+   2    5        0.548        0.074
+   5    2       -0.537       -0.072
+
+   3    4        0.189       -0.052
+   4    3       -0.189        0.032
+
+   4    5        0.063       -0.023
+   5    4       -0.063       -0.028
+
+Total system loss:
+Real Power Loss =   0.0458 P.U.
+Reactive Power Loss =  -0.1744 P.U.

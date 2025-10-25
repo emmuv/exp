@@ -1,0 +1,117 @@
+
+**** 09/12/25 09:29:25 ************** PSpice Lite (Mar 2000) *****************
+
+ BUCK CONVERTER
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+VS 1 0 DC 110V
+VY 1 2 DC 0V;VOLTAGE SOURCE TO MESURE INPUT CURRENT
+VG 7 3 PULSE(0V 20V 0 0.1NS 0.1NS 27.28US 50US)
+RB 7 6 250
+LE 3 4 681.82UH
+CE 4 0 8.33UF IC=60V;INITIAL VOLTAGE
+L 4 8 40.91UH
+R 8 5 3
+VX 5 0 DC 0
+DM 0 3 DMOD
+.MODEL DMOD D(IS=2.2E-15 BV=1800V TT=0)
+Q1 2 6 3 QMOD
+.MODEL QMOD NPN(IS=6.734F BF=416.4 BR=0.7371 CJC=3.638P CJE=4.493P TR=239.5N TF=301.2P)
+.TRAN 1US 1.6MS 1.5MS 1US UIC
+.PROBE
+.OPTIONS ABSTOL=1N RELTOL=0.01 VNTOL=0.1 ITL5=50000
+.FOUR 20KHZ I(VY)
+.END
+
+**** 09/12/25 09:29:25 ************** PSpice Lite (Mar 2000) *****************
+
+ BUCK CONVERTER
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               DMOD            
+          IS    2.200000E-15 
+          BV    1.800000E+03 
+
+
+**** 09/12/25 09:29:25 ************** PSpice Lite (Mar 2000) *****************
+
+ BUCK CONVERTER
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               QMOD            
+               NPN             
+          IS    6.734000E-15 
+          BF  416.4          
+          NF    1            
+          BR     .7371       
+          NR    1            
+         CJE    4.493000E-12 
+         CJC    3.638000E-12 
+          TF  301.200000E-12 
+          TR  239.500000E-09 
+          CN    2.42         
+           D     .87         
+
+
+**** 09/12/25 09:29:25 ************** PSpice Lite (Mar 2000) *****************
+
+ BUCK CONVERTER
+
+
+ ****     FOURIER ANALYSIS                 TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+FOURIER COMPONENTS OF TRANSIENT RESPONSE I(VY)
+
+
+
+ DC COMPONENT =   1.077960E+01
+
+ HARMONIC   FREQUENCY    FOURIER    NORMALIZED    PHASE        NORMALIZED
+    NO         (HZ)     COMPONENT    COMPONENT    (DEG)       PHASE (DEG)
+
+     1     2.000E+04    1.248E+01    1.000E+00   -1.199E+01    0.000E+00
+     2     4.000E+04    1.772E+00    1.420E-01    7.961E+01    1.036E+02
+     3     6.000E+04    3.838E+00    3.074E-01   -3.141E+01    4.551E+00
+     4     8.000E+04    1.688E+00    1.352E-01    5.486E+01    1.028E+02
+     5     1.000E+05    1.931E+00    1.547E-01   -5.202E+01    7.920E+00
+     6     1.200E+05    1.578E+00    1.264E-01    3.326E+01    1.052E+02
+     7     1.400E+05    1.006E+00    8.058E-02   -7.347E+01    1.045E+01
+     8     1.600E+05    1.434E+00    1.149E-01    1.245E+01    1.083E+02
+     9     1.800E+05    4.310E-01    3.453E-02   -9.773E+01    1.016E+01
+
+
+     TOTAL HARMONIC DISTORTION =   4.401316E+01 PERCENT
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .05
+
